@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería - Cervecería Artesanal</title>
+  <meta name="description" content="Conocé nuestras instalaciones, eventos y productos a través de nuestra galería.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            amber: { 50:'#fffbeb',100:'#fef3c7',300:'#fcd34d',500:'#f59e0b',600:'#d97706',700:'#b45309',800:'#92400e',900:'#78350f' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-stone-900 text-stone-100" data-page="galeria">
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-16 px-4 bg-gradient-to-b from-stone-800 to-stone-900">
+    <div class="max-w-7xl mx-auto text-center">
+      <span class="text-amber-500 uppercase tracking-widest text-sm font-semibold animate-on-scroll">Nuestra Galería</span>
+      <h1 class="text-5xl md:text-6xl font-serif font-bold mt-4 mb-6 animate-on-scroll">Momentos Cerveceros</h1>
+      <p class="text-stone-200 text-lg max-w-3xl mx-auto animate-on-scroll">
+        Recorrido visual por nuestras instalaciones, eventos y productos
+      </p>
+    </div>
+  </section>
+
+  <!-- FILTROS -->
+  <section class="py-8 px-4 bg-stone-800 sticky top-20 z-30 border-y border-stone-700">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-wrap gap-3 justify-center">
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="instalaciones">Instalaciones</button>
+        <button class="filter-btn" data-filter="productos">Productos</button>
+        <button class="filter-btn" data-filter="eventos">Eventos</button>
+        <button class="filter-btn" data-filter="equipo">Equipo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="gallery-grid" id="galeria-container"></div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="py-20 px-4 bg-stone-800 bg-stone-pattern">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12 animate-on-scroll">
+        <span class="text-amber-500 uppercase tracking-widest text-sm font-semibold">Conocé Más</span>
+        <h2 class="section-title text-4xl md:text-5xl font-serif font-bold mt-3">Visitanos</h2>
+      </div>
+      <div class="aspect-video rounded-2xl overflow-hidden border-2 border-amber-700/30 shadow-2xl max-w-5xl mx-auto animate-on-scroll">
+        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+          alt="Cervecería" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS RÁPIDOS -->
+  <section class="py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="card p-6 animate-on-scroll">
+          <div class="text-4xl font-serif font-bold text-amber-500">2000m²</div>
+          <div class="text-stone-200 text-sm uppercase tracking-wider mt-2">Instalaciones</div>
+        </div>
+        <div class="card p-6 animate-on-scroll">
+          <div class="text-4xl font-serif font-bold text-amber-500">500+</div>
+          <div class="text-stone-200 text-sm uppercase tracking-wider mt-2">Eventos</div>
+        </div>
+        <div class="card p-6 animate-on-scroll">
+          <div class="text-4xl font-serif font-bold text-amber-500">24</div>
+          <div class="text-stone-200 text-sm uppercase tracking-wider mt-2">Estilos</div>
+        </div>
+        <div class="card p-6 animate-on-scroll">
+          <div class="text-4xl font-serif font-bold text-amber-500">100%</div>
+          <div class="text-stone-200 text-sm uppercase tracking-wider mt-2">Artesanal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-4 bg-gradient-to-r from-amber-700 to-amber-900 text-white text-center">
+    <div class="max-w-4xl mx-auto animate-on-scroll">
+      <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">¿Te Gustaría Visitarnos?</h2>
+      <p class="text-amber-100 text-lg mb-8">
+        Conocé la cervecería, probá nuestras variedades y viví una experiencia única
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contacto.html" class="inline-block bg-white text-amber-700 px-8 py-4 rounded-full font-bold hover:bg-amber-100 transition-all hover:scale-105">
+          Reservar Visita
+        </a>
+        <a href="servicios.html" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-amber-700 transition-all">
+          Ver Servicios
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    window.addEventListener('componentsMounted', () => {
+      const data = window.cerveceriaData;
+      const container = document.getElementById('galeria-container');
+
+      if (container) {
+        container.innerHTML = data.galeria.map(item => `
+          <div class="gallery-item animate-on-scroll" data-category="${item.categoria}">
+            <img src="${item.url}" alt="${item.alt}" loading="lazy">
+            <div class="gallery-item-caption">
+              <span class="text-amber-300 text-xs uppercase tracking-wider">${item.categoria}</span>
+              <p class="text-sm">${item.alt}</p>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      initScrollAnimations();
+      initFiltrosGaleria();
+    });
+  </script>
+</body>
+</html>

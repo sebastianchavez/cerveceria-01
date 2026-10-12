@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precios y Catálogo - Cervecería Artesanal</title>
+  <meta name="description" content="Conocé nuestro catálogo de cervezas artesanales y packs promocionales.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            amber: { 50:'#fffbeb',100:'#fef3c7',300:'#fcd34d',500:'#f59e0b',600:'#d97706',700:'#b45309',800:'#92400e',900:'#78350f' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-stone-900 text-stone-100" data-page="precios">
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-16 px-4 bg-gradient-to-b from-stone-800 to-stone-900">
+    <div class="max-w-7xl mx-auto text-center">
+      <span class="text-amber-500 uppercase tracking-widest text-sm font-semibold animate-on-scroll">Catálogo y Precios</span>
+      <h1 class="text-5xl md:text-6xl font-serif font-bold mt-4 mb-6 animate-on-scroll">Nuestras Cervezas</h1>
+      <p class="text-stone-200 text-lg max-w-3xl mx-auto animate-on-scroll">
+        Una variedad para cada paladar. Calidad artesanal garantizada.
+      </p>
+    </div>
+  </section>
+
+  <!-- FILTROS -->
+  <section class="py-8 px-4 bg-stone-800 sticky top-20 z-30 border-y border-stone-700">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-wrap gap-3 justify-center">
+        <button class="filter-btn precio-filter-btn active" data-filter="todos">Todas</button>
+        <button class="filter-btn precio-filter-btn" data-filter="rubia">Rubias</button>
+        <button class="filter-btn precio-filter-btn" data-filter="tostada">Tostadas</button>
+        <button class="filter-btn precio-filter-btn" data-filter="ipa">IPA</button>
+        <button class="filter-btn precio-filter-btn" data-filter="specialty">Especiales</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LISTA DE CERVEZAS -->
+  <section class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="cervezas-container"></div>
+    </div>
+  </section>
+
+  <!-- PACKS PROMOCIONALES -->
+  <section class="py-20 px-4 bg-stone-800 bg-stone-pattern">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 animate-on-scroll">
+        <span class="text-amber-500 uppercase tracking-widest text-sm font-semibold">Promociones</span>
+        <h2 class="section-title text-4xl md:text-5xl font-serif font-bold mt-3">Packs Especiales</h2>
+        <p class="text-stone-200 mt-4 max-w-2xl mx-auto">
+          Ahorrá con nuestros packs diseñados para cada ocasión
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="packs-container"></div>
+    </div>
+  </section>
+
+  <!-- INFO DE PAGOS -->
+  <section class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Medios de Pago y Envíos</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="card p-8 text-center animate-on-scroll">
+          <div class="text-5xl mb-4">💳</div>
+          <h4 class="text-xl font-serif font-bold text-amber-500 mb-3">Medios de Pago</h4>
+          <ul class="text-stone-200 text-sm space-y-2">
+            <li>• Efectivo</li>
+            <li>• Tarjetas de débito/crédito</li>
+            <li>• Transferencia bancaria</li>
+            <li>• Webpay (transbank)</li>
+            <li>• MercadoPago</li>
+            <li>• Khipu y otros medios</li>
+          </ul>
+        </div>
+        <div class="card p-8 text-center animate-on-scroll">
+          <div class="text-5xl mb-4">🚚</div>
+          <h4 class="text-xl font-serif font-bold text-amber-500 mb-3">Envíos a Domicilio</h4>
+          <ul class="text-stone-200 text-sm space-y-2">
+            <li>• Santiago: 24-48 hrs</li>
+            <li>• Regiones: 2-5 días</li>
+            <li>• Envío gratis sobre $80.000</li>
+            <li>• Despacho vía Chilexpress, Starken, Blue Express</li>
+            <li>• Retiro en local sin costo</li>
+          </ul>
+        </div>
+        <div class="card p-8 text-center animate-on-scroll">
+          <div class="text-5xl mb-4">📞</div>
+          <h4 class="text-xl font-serif font-bold text-amber-500 mb-3">Pedidos Mayoristas</h4>
+          <p class="text-stone-200 text-sm mb-4">
+            Consultá por precios especiales para bares, restaurantes y eventos en todo Chile.
+          </p>
+          <a href="contacto.html" class="btn-primary text-sm">Contactar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    window.addEventListener('componentsMounted', () => {
+      const data = window.cerveceriaData;
+
+      // Renderizar cervezas
+      const cervezasContainer = document.getElementById('cervezas-container');
+      if (cervezasContainer) {
+        cervezasContainer.innerHTML = data.cervezas.map(c => `
+          <div class="card precio-item animate-on-scroll" data-tipo="${c.tipo}">
+            <div class="card-image h-56 relative">
+              <img src="${c.imagen}" alt="${c.nombre}" loading="lazy">
+              <span class="absolute top-3 left-3 bg-amber-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                ${c.tipoLabel}
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-serif font-bold text-white mb-2">${c.nombre}</h3>
+              <p class="text-stone-200 text-sm mb-4 line-clamp-3">${c.descripcion}</p>
+              <div class="flex items-center justify-between pt-4 border-t border-stone-700">
+                <div>
+                  <div class="text-2xl font-bold text-amber-500">$${c.precio.toLocaleString('es-CL')}</div>
+                  <div class="text-xs text-stone-300">${c.volumen}</div>
+                </div>
+                <button class="btn-primary text-sm">Pedir</button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Renderizar packs
+      const packsContainer = document.getElementById('packs-container');
+      if (packsContainer) {
+        packsContainer.innerHTML = data.packs.map(p => `
+          <div class="price-card ${p.featured ? 'featured' : ''} animate-on-scroll">
+            ${p.featured ? '<span class="price-badge">Más Popular</span>' : ''}
+            <h3 class="text-2xl font-serif font-bold text-amber-500 mb-2">${p.nombre}</h3>
+            <p class="text-stone-200 text-sm mb-4">${p.descripcion}</p>
+            <div class="mb-6">
+              <span class="price-amount">$${p.precio.toLocaleString('es-CL')}</span>
+              <span class="text-stone-300 line-through ml-2">$${p.original.toLocaleString('es-CL')}</span>
+            </div>
+            <ul class="space-y-2 mb-6 text-stone-200 text-sm">
+              ${p.items.map(item => `<li class="flex items-center"><span class="text-amber-500 mr-2">✓</span>${item}</li>`).join('')}
+            </ul>
+            <a href="contacto.html" class="${p.featured ? 'btn-primary' : 'btn-secondary'} block text-center w-full">Comprar</a>
+          </div>
+        `).join('');
+      }
+
+      initScrollAnimations();
+      initFiltrosPrecios();
+    });
+  </script>
+</body>
+</html>

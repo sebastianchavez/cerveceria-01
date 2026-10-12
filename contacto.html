@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Cervecería Artesanal</title>
+  <meta name="description" content="Contactanos para consultas, reservas, eventos y más.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            amber: { 50:'#fffbeb',100:'#fef3c7',300:'#fcd34d',500:'#f59e0b',600:'#d97706',700:'#b45309',800:'#92400e',900:'#78350f' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-stone-900 text-stone-100" data-page="contacto">
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-16 px-4 bg-gradient-to-b from-stone-800 to-stone-900">
+    <div class="max-w-7xl mx-auto text-center">
+      <span class="text-amber-500 uppercase tracking-widest text-sm font-semibold animate-on-scroll">Hablemos</span>
+      <h1 class="text-5xl md:text-6xl font-serif font-bold mt-4 mb-6 animate-on-scroll">Contacto</h1>
+      <p class="text-stone-200 text-lg max-w-3xl mx-auto animate-on-scroll">
+        Estamos para ayudarte. Escribinos, llamanos o visitanos en nuestra cervecería.
+      </p>
+    </div>
+  </section>
+
+  <!-- INFO + FORMULARIO -->
+  <section class="py-20 px-4">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+      <!-- FORMULARIO -->
+      <div class="card p-8 animate-on-scroll">
+        <h2 class="text-3xl font-serif font-bold text-amber-500 mb-2">Envianos un Mensaje</h2>
+        <p class="text-stone-200 text-sm mb-8">Completá el formulario y te responderemos a la brevedad.</p>
+
+        <form id="form-contacto" class="space-y-6">
+          <div>
+            <label class="block text-stone-100 text-sm font-semibold mb-2">Nombre Completo *</label>
+            <input type="text" name="nombre" required
+              class="form-input"
+              placeholder="Tu nombre">
+            <div class="error-message">Por favor ingresá tu nombre</div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-stone-100 text-sm font-semibold mb-2">Email *</label>
+              <input type="email" name="email" required
+                class="form-input"
+                placeholder="tu@email.com">
+              <div class="error-message">Email inválido</div>
+            </div>
+            <div>
+              <label class="block text-stone-100 text-sm font-semibold mb-2">Teléfono</label>
+              <input type="tel" name="telefono"
+                class="form-input"
+                placeholder="+56 9 5555 1234">
+              <div class="error-message">Teléfono inválido</div>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-stone-100 text-sm font-semibold mb-2">Asunto *</label>
+            <select name="asunto" required class="form-input">
+              <option value="">Seleccioná un asunto</option>
+              <option value="reserva">Reservar mesa</option>
+              <option value="evento">Cotizar evento</option>
+              <option value="mayorista">Venta mayorista</option>
+              <option value="tour">Tour por la fábrica</option>
+              <option value="otro">Otro</option>
+            </select>
+            <div class="error-message">Seleccioná un asunto</div>
+          </div>
+
+          <div>
+            <label class="block text-stone-100 text-sm font-semibold mb-2">Mensaje *</label>
+            <textarea name="mensaje" required class="form-input" rows="5"
+              placeholder="Contanos en qué podemos ayudarte..."></textarea>
+            <div class="error-message">Por favor escribí tu mensaje</div>
+          </div>
+
+          <button type="submit" class="btn-primary w-full">Enviar Mensaje</button>
+
+          <!-- Mensaje de éxito -->
+          <div class="form-success hidden items-center gap-3 bg-amber-500/10 border border-amber-500 text-amber-300 p-4 rounded-lg">
+            <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span>¡Mensaje enviado con éxito! Te responderemos pronto.</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- INFO -->
+      <div class="space-y-6 animate-on-scroll">
+        <!-- Tarjetas de info -->
+        <div class="card p-6 flex items-start space-x-4">
+          <div class="w-12 h-12 rounded-full bg-amber-600 flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl">📍</span>
+          </div>
+          <div>
+            <h4 class="text-lg font-serif font-bold text-amber-500 mb-1">Dirección</h4>
+            <p class="text-stone-200">Av. de los Lúpulos 1234, Providencia</p>
+            <p class="text-stone-300 text-sm">Región Metropolitana, Santiago - Chile</p>
+          </div>
+        </div>
+
+        <div class="card p-6 flex items-start space-x-4">
+          <div class="w-12 h-12 rounded-full bg-amber-600 flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl">📞</span>
+          </div>
+          <div>
+            <h4 class="text-lg font-serif font-bold text-amber-500 mb-1">Teléfonos</h4>
+            <p class="text-stone-200">+56 2 2555 1234 (fijo)</p>
+            <p class="text-stone-300 text-sm">+56 9 5555 1234 (móvil)</p>
+            <a href="https://wa.me/56955551234" class="text-amber-500 hover:text-amber-300 text-sm mt-1 inline-block">WhatsApp →</a>
+          </div>
+        </div>
+
+        <div class="card p-6 flex items-start space-x-4">
+          <div class="w-12 h-12 rounded-full bg-amber-600 flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl">✉️</span>
+          </div>
+          <div>
+            <h4 class="text-lg font-serif font-bold text-amber-500 mb-1">Email</h4>
+            <p class="text-stone-200">contacto@cerveceriaartesanal.cl</p>
+            <p class="text-stone-300 text-sm">ventas@cerveceriaartesanal.cl</p>
+          </div>
+        </div>
+
+        <!-- HORARIOS -->
+        <div class="card p-6">
+          <div class="flex items-start space-x-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-amber-600 flex items-center justify-center flex-shrink-0">
+              <span class="text-2xl">🕐</span>
+            </div>
+            <div>
+              <h4 class="text-lg font-serif font-bold text-amber-500">Horarios de Atención</h4>
+            </div>
+          </div>
+          <ul class="space-y-2 text-stone-200" id="horarios-container"></ul>
+        </div>
+
+        <!-- REDES -->
+        <div class="card p-6">
+          <h4 class="text-lg font-serif font-bold text-amber-500 mb-4">Seguinos en Redes</h4>
+          <div class="redes-sociales flex space-x-3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPA -->
+  <section class="py-12 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-8 animate-on-scroll">
+        <h2 class="text-3xl font-serif font-bold text-amber-500">¿Cómo Llegar?</h2>
+        <p class="text-stone-200 mt-2">Te esperamos en pleno corazón de Santiago</p>
+      </div>
+      <div class="aspect-video rounded-2xl overflow-hidden border-2 border-amber-700/30 shadow-2xl animate-on-scroll">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13316.377657687164!2d-70.6258833!3d-33.4247971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5b5e1efd8e3%3A0x1c1b6d7e9e5e3e2d!2sProvidencia%2C%20Santiago!5e0!3m2!1ses-419!2scl!4v1700000000000"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    window.addEventListener('componentsMounted', () => {
+      const data = window.cerveceriaData;
+
+      // Renderizar horarios
+      const horariosContainer = document.getElementById('horarios-container');
+      if (horariosContainer) {
+        horariosContainer.innerHTML = data.horarios.map(h => `
+          <li class="flex justify-between items-center py-2 border-b border-stone-700 last:border-0">
+            <span class="font-semibold">${h.dia}</span>
+            <span class="text-amber-300">${h.apertura}${h.cierre ? ' - ' + h.cierre : ''}</span>
+          </li>
+        `).join('');
+      }
+
+      initScrollAnimations();
+      initFormulario();
+    });
+  </script>
+</body>
+</html>

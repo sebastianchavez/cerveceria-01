@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - Cervecería Artesanal</title>
+  <meta name="description" content="Catering, tours, degustaciones, barra móvil y más servicios para tu evento.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            amber: { 50:'#fffbeb',100:'#fef3c7',300:'#fcd34d',500:'#f59e0b',600:'#d97706',700:'#b45309',800:'#92400e',900:'#78350f' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-stone-900 text-stone-100" data-page="servicios">
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-16 px-4 bg-gradient-to-b from-stone-800 to-stone-900">
+    <div class="max-w-7xl mx-auto text-center">
+      <span class="text-amber-500 uppercase tracking-widest text-sm font-semibold animate-on-scroll">Lo Que Ofrecemos</span>
+      <h1 class="text-5xl md:text-6xl font-serif font-bold mt-4 mb-6 animate-on-scroll">Nuestros Servicios</h1>
+      <p class="text-stone-200 text-lg max-w-3xl mx-auto animate-on-scroll">
+        Soluciones completas para eventos, degustaciones y distribución
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICIOS PRINCIPALES -->
+  <section class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="servicios-container"></div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="py-20 px-4 bg-stone-800 bg-stone-pattern">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 animate-on-scroll">
+        <span class="text-amber-500 uppercase tracking-widest text-sm font-semibold">Cómo Trabajamos</span>
+        <h2 class="section-title text-4xl md:text-5xl font-serif font-bold mt-3">Nuestro Proceso</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center animate-on-scroll">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-amber-600 flex items-center justify-center text-3xl font-bold">1</div>
+          <h4 class="text-xl font-serif font-bold text-amber-500 mb-2">Consultoría</h4>
+          <p class="text-stone-200 text-sm">Conversamos sobre tus necesidades y te asesoramos</p>
+        </div>
+        <div class="text-center animate-on-scroll">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-amber-600 flex items-center justify-center text-3xl font-bold">2</div>
+          <h4 class="text-xl font-serif font-bold text-amber-500 mb-2">Cotización</h4>
+          <p class="text-stone-200 text-sm">Te enviamos una propuesta personalizada</p>
+        </div>
+        <div class="text-center animate-on-scroll">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-amber-600 flex items-center justify-center text-3xl font-bold">3</div>
+          <h4 class="text-xl font-serif font-bold text-amber-500 mb-2">Planificación</h4>
+          <p class="text-stone-200 text-sm">Coordinamos cada detalle del servicio</p>
+        </div>
+        <div class="text-center animate-on-scroll">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-amber-600 flex items-center justify-center text-3xl font-bold">4</div>
+          <h4 class="text-xl font-serif font-bold text-amber-500 mb-2">Ejecución</h4>
+          <p class="text-stone-200 text-sm">Brindamos un servicio excepcional</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTÍA -->
+  <section class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="card p-12 animate-on-scroll text-center bg-gradient-to-br from-stone-800 to-amber-900/20">
+        <div class="text-6xl mb-6">🏆</div>
+        <h2 class="text-4xl font-serif font-bold text-amber-500 mb-6">Nuestra Garantía</h2>
+        <p class="text-stone-200 text-lg max-w-3xl mx-auto leading-relaxed mb-8">
+          Nos enorgullecemos de ofrecer servicios de primera calidad. Si por algún motivo no quedas satisfecho, trabajamos para solucionarlo inmediatamente.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div>
+            <div class="text-4xl font-serif font-bold text-amber-500">100%</div>
+            <div class="text-stone-200 text-sm uppercase tracking-wider mt-2">Calidad Garantizada</div>
+          </div>
+          <div>
+            <div class="text-4xl font-serif font-bold text-amber-500">24/7</div>
+            <div class="text-stone-200 text-sm uppercase tracking-wider mt-2">Atención al Cliente</div>
+          </div>
+          <div>
+            <div class="text-4xl font-serif font-bold text-amber-500">+500</div>
+            <div class="text-stone-200 text-sm uppercase tracking-wider mt-2">Eventos Realizados</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-4 bg-gradient-to-r from-amber-700 to-amber-900 text-white text-center">
+    <div class="max-w-4xl mx-auto animate-on-scroll">
+      <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">¿Tenés un Evento en Mente?</h2>
+      <p class="text-amber-100 text-lg mb-8">
+        Pedinos un presupuesto sin compromiso y haremos que tu evento sea único
+      </p>
+      <a href="contacto.html" class="inline-block bg-white text-amber-700 px-8 py-4 rounded-full font-bold hover:bg-amber-100 transition-all hover:scale-105">
+        Solicitar Cotización
+      </a>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    window.addEventListener('componentsMounted', () => {
+      const data = window.cerveceriaData;
+      const container = document.getElementById('servicios-container');
+      if (container) {
+        container.innerHTML = data.servicios.map(s => `
+          <div class="card p-8 animate-on-scroll group cursor-pointer">
+            <div class="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">${s.icono}</div>
+            <h3 class="text-2xl font-serif font-bold text-white mb-3 group-hover:text-amber-500 transition-colors">${s.titulo}</h3>
+            <p class="text-stone-200 leading-relaxed mb-6">${s.descripcion}</p>
+            <div class="flex items-center justify-between pt-4 border-t border-stone-700">
+              <span class="text-amber-500 font-bold">${s.precio}</span>
+              <a href="contacto.html" class="text-amber-500 hover:text-amber-300 font-semibold text-sm">Consultar →</a>
+            </div>
+          </div>
+        `).join('');
+      }
+      initScrollAnimations();
+    });
+  </script>
+</body>
+</html>

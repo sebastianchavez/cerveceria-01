@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cervecería Artesanal - Tradición desde 1892</title>
+  <meta name="description" content="Cervecería artesanal con más de 130 años de tradición. Cervezas elaboradas a mano con ingredientes naturales.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            amber: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              300: '#fcd34d',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-stone-900 text-stone-100" data-page="home">
+
+  <!-- Navbar placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+      <h1 class="hero-title font-serif">Cervecería<br>Artesanal</h1>
+      <p class="hero-subtitle text-stone-100 text-lg md:text-2xl mt-6 mb-8 font-light max-w-3xl mx-auto">
+        Tradición, pasión y el sabor auténtico de la cerveza hecha a mano desde 1892
+      </p>
+      <div class="hero-buttons flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="precios.html" class="btn-primary">Ver Nuestras Cervezas</a>
+        <a href="contacto.html" class="btn-secondary">Contactanos</a>
+      </div>
+    </div>
+
+    <!-- Indicador scroll -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-amber-500 float-animation">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- CERVEZAS DESTACADAS -->
+  <section class="py-20 px-4 bg-stone-900 bg-stone-pattern">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 animate-on-scroll">
+        <span class="text-amber-500 uppercase tracking-widest text-sm font-semibold">Nuestra Selección</span>
+        <h2 class="section-title text-4xl md:text-5xl font-serif font-bold mt-3">Cervezas Destacadas</h2>
+        <p class="text-stone-200 mt-6 max-w-2xl mx-auto">
+          Elaboradas con ingredientes naturales y mucho amor por el oficio
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="cervezas-destacadas"></div>
+    </div>
+  </section>
+
+  <!-- ESTADÍSTICAS -->
+  <section class="py-16 bg-gradient-to-r from-amber-700 to-amber-900">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+        <div class="animate-on-scroll">
+          <div class="counter stat-number text-white" data-target="130">0</div>
+          <div class="text-amber-100 uppercase tracking-wider text-sm mt-2">Años de Tradición</div>
+        </div>
+        <div class="animate-on-scroll">
+          <div class="counter stat-number text-white" data-target="24">0</div>
+          <div class="text-amber-100 uppercase tracking-wider text-sm mt-2">Variedades</div>
+        </div>
+        <div class="animate-on-scroll">
+          <div class="counter stat-number text-white" data-target="50000">0</div>
+          <div class="text-amber-100 uppercase tracking-wider text-sm mt-2">Clientes Felices</div>
+        </div>
+        <div class="animate-on-scroll">
+          <div class="counter stat-number text-white" data-target="15">0</div>
+          <div class="text-amber-100 uppercase tracking-wider text-sm mt-2">Premios Ganados</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ ELEGIRNOS -->
+  <section class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 animate-on-scroll">
+        <span class="text-amber-500 uppercase tracking-widest text-sm font-semibold">Tradición y Calidad</span>
+        <h2 class="section-title text-4xl md:text-5xl font-serif font-bold mt-3">¿Por Qué Elegirnos?</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="card p-8 animate-on-scroll">
+          <div class="text-5xl mb-4">🌾</div>
+          <h3 class="text-2xl font-serif font-bold text-amber-500 mb-3">Ingredientes Naturales</h3>
+          <p class="text-stone-200 leading-relaxed">
+            Seleccionamos las mejores maltas, lúpulos y levaduras. Sin conservantes ni aditivos artificiales.
+          </p>
+        </div>
+        <div class="card p-8 animate-on-scroll">
+          <div class="text-5xl mb-4">🍻</div>
+          <h3 class="text-2xl font-serif font-bold text-amber-500 mb-3">Elaboración Artesanal</h3>
+          <p class="text-stone-200 leading-relaxed">
+            Cada lote es elaborado por nuestros maestros cerveceros con técnicas tradicionales y pasión por el oficio.
+          </p>
+        </div>
+        <div class="card p-8 animate-on-scroll">
+          <div class="text-5xl mb-4">🏆</div>
+          <h3 class="text-2xl font-serif font-bold text-amber-500 mb-3">Premios y Reconocimientos</h3>
+          <p class="text-stone-200 leading-relaxed">
+            Más de 15 premios internacionales avalan la calidad y excelencia de nuestras cervezas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="py-20 px-4 bg-stone-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 animate-on-scroll">
+        <span class="text-amber-500 uppercase tracking-widest text-sm font-semibold">Testimonios</span>
+        <h2 class="section-title text-4xl md:text-5xl font-serif font-bold mt-3">Lo Que Dicen Nuestros Clientes</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="testimonios"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-4 bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900">
+    <div class="max-w-4xl mx-auto text-center animate-on-scroll">
+      <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">¿Listo Para Probar Nuestra Cerveza?</h2>
+      <p class="text-stone-200 text-lg mb-8">
+        Visitá nuestra cervecería, pedí delivery o contratá nuestros servicios para tu próximo evento.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contacto.html" class="btn-primary">Reservar Mesa</a>
+        <a href="servicios.html" class="btn-secondary">Ver Servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Esperar a que los componentes estén montados antes de renderizar contenido dinámico
+    window.addEventListener('componentsMounted', () => {
+      const data = window.cerveceriaData;
+      const destacadas = data.cervezas.filter(c => c.destacado).slice(0, 4);
+
+      const cervezasContainer = document.getElementById('cervezas-destacadas');
+      if (cervezasContainer) {
+        cervezasContainer.innerHTML = destacadas.map(cerve => `
+          <div class="card animate-on-scroll">
+            <div class="card-image h-56">
+              <img src="${cerve.imagen}" alt="${cerve.nombre}" loading="lazy">
+            </div>
+            <div class="p-6">
+              <span class="text-xs text-amber-500 uppercase tracking-wider font-semibold">${cerve.tipoLabel}</span>
+              <h3 class="text-xl font-serif font-bold text-white mt-2 mb-2">${cerve.nombre}</h3>
+              <p class="text-stone-200 text-sm mb-4 line-clamp-3">${cerve.descripcion}</p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-amber-500">$${cerve.precio.toLocaleString('es-CL')}</span>
+                <a href="precios.html" class="text-amber-500 hover:text-amber-300 text-sm font-semibold">Ver más →</a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Testimonios
+      const testimoniosContainer = document.getElementById('testimonios');
+      if (testimoniosContainer) {
+        testimoniosContainer.innerHTML = data.testimonios.map(t => `
+          <div class="card p-8 animate-on-scroll">
+            <div class="flex items-center mb-4">
+              ${Array(t.rating).fill().map(() => '<span class="text-amber-500 text-xl">★</span>').join('')}
+            </div>
+            <p class="text-stone-200 italic mb-6 leading-relaxed">"${t.comentario}"</p>
+            <div class="flex items-center space-x-3">
+              <img src="${t.avatar}" alt="${t.nombre}" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="text-white font-semibold">${t.nombre}</p>
+                <p class="text-stone-300 text-sm">Cliente</p>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Re-inicializar animaciones después de agregar contenido
+      initScrollAnimations();
+    });
+  </script>
+</body>
+</html>
