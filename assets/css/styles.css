@@ -553,7 +553,7 @@ textarea.form-input {
   position: relative;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -712,12 +712,14 @@ textarea.form-input {
     background-attachment: scroll;
   }
 
-  .desktop-nav {
-    display: none;
-  }
-
   .gallery-grid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 1023px) {
+  .desktop-nav {
+    display: none;
   }
 }
 

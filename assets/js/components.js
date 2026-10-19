@@ -15,7 +15,7 @@ function renderNavbar(activePage = '') {
   ];
 
   return `
-    <nav class="navbar fixed top-0 left-0 right-0 z-50 ${isHome ? 'navbar-transparent' : 'scrolled'}" id="main-navbar">
+    <nav class="navbar fixed top-0 left-0 right-0 z-[60] ${isHome ? 'navbar-transparent' : 'scrolled'}" id="main-navbar">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           <!-- Logo -->
@@ -30,7 +30,7 @@ function renderNavbar(activePage = '') {
           </a>
 
           <!-- Desktop Nav -->
-          <div class="desktop-nav hidden md:flex items-center space-x-8">
+          <div class="desktop-nav hidden lg:flex items-center space-x-4 xl:space-x-8">
             ${links.map(link => `
               <a href="${link.href}" class="nav-link text-stone-100 font-medium text-sm uppercase tracking-wider ${activePage === link.key ? 'active' : ''}">
                 ${link.label}
@@ -40,7 +40,7 @@ function renderNavbar(activePage = '') {
           </div>
 
           <!-- Mobile Hamburger -->
-          <div class="hamburger md:hidden" id="hamburger-btn">
+          <div class="hamburger lg:hidden" id="hamburger-btn">
             <span></span>
             <span></span>
             <span></span>
